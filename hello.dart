@@ -1,3 +1,5 @@
 void main() {
-  print("Hello World!");
+  var firstName = "ishaq";
+  var lastName = "aliyu muhammad";
+  print("My FullName is $firstName $lastName");
 }
