@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() {
-  print("Enter number:");
-  int? number = int.parse(stdin.readLineSync()!);
-  print("The entered number is ${number}");
+  print("Enter a floating number:");
+  double number = double.parse(stdin.readLineSync()!);
+  print("The entered num is $number");
 }
