@@ -1,4 +1,5 @@
 void main() {
-  String value = "a";
-  print(value.runes);
+  dynamic myVariable = 50;
+  myVariable = "Hello";
+  print(myVariable);
 }
