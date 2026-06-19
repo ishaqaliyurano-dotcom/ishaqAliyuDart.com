@@ -1,4 +1,9 @@
 void main() {
-  Set<String> weekday = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-  print(weekday);
+  Map<String, String> myDetails = {
+    'name': 'John Doe',
+    'address': 'USA',
+    'fathername': 'Soe Doe',
+  };
+  // displaying the output
+  print(myDetails['name']);
 }
