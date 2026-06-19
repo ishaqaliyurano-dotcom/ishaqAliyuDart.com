@@ -1,5 +1,9 @@
 void main() {
-  // Declaring Variables
-  double price = 1130.2232323233233; // valid.
-  print(price.toStringAsFixed(2));
+  // Set price value
+  num price = 10;
+  String withoutRawString = "The value of price is \t $price"; // regular String
+  String withRawString = r"The value of price is \t $price"; // raw String
+
+  print("Without Raw: $withoutRawString"); // regular result
+  print("With Raw: $withRawString"); // with raw result
 }
