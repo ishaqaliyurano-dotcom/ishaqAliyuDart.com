@@ -1,9 +1,8 @@
 void main() {
-  // Set price value
-  num price = 10;
-  String withoutRawString = "The value of price is \t $price"; // regular String
-  String withRawString = r"The value of price is \t $price"; // raw String
-
-  print("Without Raw: $withoutRawString"); // regular result
-  print("With Raw: $withRawString"); // with raw result
+  String strvalue = "1";
+  print("Type of strvalue is ${strvalue.runtimeType}");
+  int intvalue = int.parse(strvalue);
+  print("Value of intvalue is $intvalue");
+  // this will print data type
+  print("Type of intvalue is ${intvalue.runtimeType}");
 }
