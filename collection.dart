@@ -1,6 +1,7 @@
 void main() {
-  List<int> list = [10, 20, 30, 40, 50];
-  var douledList = list.map((n) => n * 2);
+  List<String> names = ["Raj", "John", "Rocky"];
+  List<String> names2 = ["Mike", "Subash", "Mark"];
 
-  print((douledList));
+  List<String> allNames = [...names, ...names2];
+  print(allNames);
 }
