@@ -1,7 +1,4 @@
 void main() {
-  for (int i = 50; i <= 100; i++) {
-    if (i % 2 == 0) {
-      print(i);
-    }
-  }
+  List<String> footballplayers = ['Ronaldo', 'Messi', 'Neymar', 'Hazard'];
+  footballplayers.forEach((names) => print(names));
 }
