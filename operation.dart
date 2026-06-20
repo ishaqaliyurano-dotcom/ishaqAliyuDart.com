@@ -1,7 +1,10 @@
 void main() {
-  String value1 = "Dart Tutorial";
-  int age = 10;
-
-  print(value1 is String);
-  print(age is! int);
+  int num1 = 10;
+  int num2 = 5;
+  //printing info
+  print(num1 == num2);
+  print(num1 < num2);
+  print(num1 > num2);
+  print(num1 <= num2);
+  print(num1 >= num2);
 }
