@@ -1,27 +1,34 @@
-class NoteBook {
-  // Private Properties
-  String? _name;
-  double? _prize;
+class BankAccount {
+  // Private Property
+  double _balance = 0.0;
 
-  // Setter to update private property _name
-  set name(String name) => this._name = name;
+  // Getter to read private property _balance
+  double get balance => this._balance;
 
-  // Setter to update private property _prize
-  set price(double price) => this._prize = price;
+  // Method to deposit money
+  void deposit(double amount) {
+    this._balance += amount;
+  }
 
-  // Method to display the values of the properties
-  void display() {
-    print("Name: ${_name}");
-    print("Price: ${_prize}");
+  // Method to withdraw money
+  void withdraw(double amount) {
+    if (this._balance >= amount) {
+      this._balance -= amount;
+    } else {
+      throw new Exception("Insufficient Balance");
+    }
   }
 }
 
 void main() {
-  // Create an object of NoteBook class
-  NoteBook nb = new NoteBook();
-  // setting values to the object using setter
-  nb.name = "Dell";
-  nb.price = 500.00;
-  // Display the values of the object
-  nb.display();
+  // Create an object of BankAccount class
+  BankAccount account = new BankAccount();
+  // Deposit money
+  account.deposit(1000);
+  // Display the balance
+  print("Balance after deposit: ${account.balance}");
+  // Withdraw money
+  account.withdraw(500);
+  // Display the balance
+  print("Balance after withdraw: ${account.balance}");
 }
