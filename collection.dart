@@ -1,10 +1,10 @@
 void main() {
   Map<String, String> countryCapital = {
-    'USA': 'Washington, D.C.',
+    'USA': 'Nothing',
     'India': 'New Delhi',
     'China': 'Beijing',
   };
-  // Adding New Item
-  countryCapital['Japan'] = 'Tokio';
+  // Updating Item
+  countryCapital['USA'] = 'Washington, D.C.';
   print(countryCapital);
 }
