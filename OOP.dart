@@ -1,16 +1,37 @@
-class Car {
-  final String? name;
-  final String? model;
-  final int? price;
+class Employee {
+  // Private properties
+  int? _id;
+  String? _name;
 
-  // Constant Constructor
-  const Car({this.name, this.model, this.price});
+  // Getter method to access private property _id
+  int getId() {
+    return _id!;
+  }
+
+  // Getter method to access private property _name
+  String getName() {
+    return _name!;
+  }
+
+  // Setter method to update private property _id
+  void setId(int id) {
+    this._id = id;
+  }
+
+  // Setter method to update private property _name
+  void setName(String name) {
+    this._name = name;
+  }
 }
 
 void main() {
-  // Here car is object of class Car.
-  const Car car = Car(name: "BMW", model: "X5", price: 50000);
-  print("Name: ${car.name}");
-  print("Model: ${car.model}");
-  print("Price: ${car.price}");
+  // Create an object of Employee class
+  Employee emp = new Employee();
+  // setting values to the object using setter
+  emp.setId(1);
+  emp.setName("John");
+
+  // Retrieve the values of the object using getter
+  print("Id: ${emp.getId()}");
+  print("Name: ${emp.getName()}");
 }
