@@ -1,13 +1,9 @@
-// this function add two numbers
-int add(int a, int b) {
-  int sum = a + b;
-  return sum;
+void printInfo(String name, String gender, [String title = "sir/ma'am"]) {
+  print("Hello $title $name your gender is $gender.");
 }
 
 void main() {
-  int num1 = 10;
-  int num2 = 20;
-
-  int total = add(num1, num2);
-  print("The sum is $total.");
+  printInfo("John", "Male");
+  printInfo("John", "Male", "Mr.");
+  printInfo("Kavya", "Female", "Ms.");
 }
