@@ -1,4 +1,6 @@
 void main() {
-  List<String> drinks = ["water", "juice", "milk", "coke"];
-  print("List in reverse: ${drinks.reversed}");
+  var evenList = [2, 4, 6, 8, 10];
+  print(evenList);
+  evenList.add(12);
+  print(evenList);
 }
