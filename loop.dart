@@ -1,8 +1,8 @@
 void main() {
-  int age = 12;
-  if (age >= 18) {
-    print("You are voter.");
+  bool isMarried = false;
+  if (isMarried) {
+    print("You are married.");
   } else {
-    print("You are not voter.");
+    print("You are single.");
   }
 }
