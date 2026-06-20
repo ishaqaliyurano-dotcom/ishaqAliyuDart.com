@@ -1,7 +1,8 @@
 void main() {
-  int i = 1;
-  do {
+  for (int i = 1; i <= 10; i++) {
+    if (i == 5) {
+      break;
+    }
     print(i);
-    i++;
-  } while (i <= 10);
+  }
 }
