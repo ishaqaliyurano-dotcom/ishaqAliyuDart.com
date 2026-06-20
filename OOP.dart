@@ -1,34 +1,36 @@
-class BankAccount {
-  // Private Property
-  double _balance = 0.0;
+class Person {
+  // Properties
+  String? name;
+  int? age;
 
-  // Getter to read private property _balance
-  double get balance => this._balance;
-
-  // Method to deposit money
-  void deposit(double amount) {
-    this._balance += amount;
+  // Method
+  void display() {
+    print("Name: $name");
+    print("Age: $age");
   }
+}
 
-  // Method to withdraw money
-  void withdraw(double amount) {
-    if (this._balance >= amount) {
-      this._balance -= amount;
-    } else {
-      throw new Exception("Insufficient Balance");
-    }
+// Here In student class, we are extending the
+// properties and methods of the Person class
+class Student extends Person {
+  // Fields
+  String? schoolName;
+  String? schoolAddress;
+
+  // Method
+  void displaySchoolInfo() {
+    print("School Name: $schoolName");
+    print("School Address: $schoolAddress");
   }
 }
 
 void main() {
-  // Create an object of BankAccount class
-  BankAccount account = new BankAccount();
-  // Deposit money
-  account.deposit(1000);
-  // Display the balance
-  print("Balance after deposit: ${account.balance}");
-  // Withdraw money
-  account.withdraw(500);
-  // Display the balance
-  print("Balance after withdraw: ${account.balance}");
+  // Creating an object of the Student class
+  var student = Student();
+  student.name = "John";
+  student.age = 20;
+  student.schoolName = "ABC School";
+  student.schoolAddress = "New York";
+  student.display();
+  student.displaySchoolInfo();
 }
