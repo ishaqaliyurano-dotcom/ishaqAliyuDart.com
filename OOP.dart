@@ -1,17 +1,19 @@
 class Laptop {
-  // Constructor
-  Laptop() {
-    print("Laptop constructor");
+  // Method
+  void show() {
+    print("Laptop show method");
   }
 }
 
 class MacBook extends Laptop {
-  // Constructor
-  MacBook() {
-    print("MacBook constructor");
+  void show() {
+    super.show(); // Calling the show method of the parent class
+    print("MacBook show method");
   }
 }
 
 void main() {
-  var macbook = MacBook();
+  // Creating an object of the MacBook class
+  MacBook macbook = MacBook();
+  macbook.show();
 }
