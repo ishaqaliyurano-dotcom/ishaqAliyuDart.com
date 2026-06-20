@@ -1,6 +1,5 @@
 void main() {
-  List<String> names = ["Raj", "John", "Rocky"];
-  names[1] = "Bill";
-  names[2] = "Elon";
-  print(names);
+  List<String> drinks = ["water", "juice", "milk", "coke"];
+  print("First element of the List is: ${drinks.first}");
+  print("Last element of the List is: ${drinks.last}");
 }
