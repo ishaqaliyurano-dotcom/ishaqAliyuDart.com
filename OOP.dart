@@ -1,16 +1,27 @@
-class Person {
-  // Properties
-  String? firstName;
-  String? lastName;
+class NoteBook {
+  // Private Properties
+  String? _name;
+  double? _prize;
 
-  // Constructor
-  Person(this.firstName, this.lastName);
+  // Setter to update private property _name
+  set name(String name) => this._name = name;
 
-  // Getter
-  String get fullName => "$firstName $lastName";
+  // Setter to update private property _prize
+  set price(double price) => this._prize = price;
+
+  // Method to display the values of the properties
+  void display() {
+    print("Name: ${_name}");
+    print("Price: ${_prize}");
+  }
 }
 
 void main() {
-  Person p = Person("John", "Doe");
-  print(p.fullName);
+  // Create an object of NoteBook class
+  NoteBook nb = new NoteBook();
+  // setting values to the object using setter
+  nb.name = "Dell";
+  nb.price = 500.00;
+  // Display the values of the object
+  nb.display();
 }
