@@ -1,24 +1,19 @@
 void main() {
-  var dayOfWeek = 5;
-  switch (dayOfWeek) {
-    case 1:
-      print("Day is Sunday.");
-      break;
-    case 2:
-      print("Day is Monday.");
-      break;
-    case 3:
-      print("Day is Tuesday.");
-      break;
-    case 4:
-      print("Day is Wednesday.");
-      break;
-    case 5:
-      print("Day is Thursday.");
-      break;
+  const weather = "cloudy";
 
+  switch (weather) {
+    case "sunny":
+      print("Its a sunny day. Put sunscreen.");
+      break;
+    case "snowy":
+      print("Get your skis.");
+      break;
+    case "cloudy":
+    case "rainy":
+      print("Please bring umbrella.");
+      break;
     default:
-      print("Invalid Weekday.");
+      print("Sorry I am not familiar with such weather.");
       break;
   }
 }
