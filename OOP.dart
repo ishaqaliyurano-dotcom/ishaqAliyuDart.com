@@ -1,22 +1,14 @@
-class Car {
-  String? name;
-  double? price;
+class Laptop {
+  String? brand;
+  int? price;
 
   // Constructor
-  Car(String name, double price) {
-    this.name = name;
-    this.price = price;
-  }
-
-  // Method
-  void display() {
-    print("Name: ${this.name}");
-    print("Price: ${this.price}");
+  Laptop() {
+    print("This is a default constructor");
   }
 }
 
 void main() {
-  // Here car is object of class Car.
-  Car car = Car("BMW", 500000.0);
-  car.display();
+  // Here laptop is object of class Laptop.
+  Laptop laptop = Laptop();
 }
