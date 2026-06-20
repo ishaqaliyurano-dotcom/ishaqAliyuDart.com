@@ -1,32 +1,24 @@
-// creating an interface using concrete class
-class Laptop {
-  // method
-  turnOn() {
-    print('Laptop turned on');
-  }
-
-  // method
-  turnOff() {
-    print('Laptop turned off');
+mixin CanFly {
+  void fly() {
+    print('I can fly');
   }
 }
 
-class MacBook implements Laptop {
-  // implementation of turnOn()
-  @override
-  turnOn() {
-    print('MacBook turned on');
-  }
-
-  // implementation of turnOff()
-  @override
-  turnOff() {
-    print('MacBook turned off');
+mixin CanWalk {
+  void walk() {
+    print('I can walk');
   }
 }
+
+class Bird with CanFly, CanWalk {}
+
+class Human with CanWalk {}
 
 void main() {
-  var macBook = MacBook();
-  macBook.turnOn();
-  macBook.turnOff();
+  var bird = Bird();
+  bird.fly();
+  bird.walk();
+
+  var human = Human();
+  human.walk();
 }
