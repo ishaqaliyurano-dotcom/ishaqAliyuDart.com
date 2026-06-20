@@ -1,4 +1,4 @@
 void main() {
-  var list = List<int>.filled(5, 0);
-  print(list);
+  var list1 = [210, 21, 22, 33, 44, 55];
+  print(list1);
 }
