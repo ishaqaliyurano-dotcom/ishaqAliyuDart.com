@@ -1,6 +1,6 @@
 void main() {
-  List myList = [3, 4, 2, 5];
+  var myList = [3, 4, 2, 5];
   print(myList);
-  myList.insert(2, 15);
+  myList.insertAll(1, [6, 7, 10, 9]);
   print(myList);
 }
