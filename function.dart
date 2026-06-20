@@ -1,4 +1,10 @@
+import 'dart:math';
+
 void main() {
-  String text = "I am text inside main. Anyone can't access me.";
-  print(text);
+  int min = 10;
+  int max = 20;
+
+  int randomnum = min + Random().nextInt((max + 1) - min);
+
+  print("Generated Random number between $min and $max is: $randomnum");
 }
