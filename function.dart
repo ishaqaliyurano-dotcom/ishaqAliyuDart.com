@@ -1,8 +1,6 @@
-// function that calculate interest
-double calculateInterest(double principal, double rate, double time) {
-  double interest = principal * rate * time / 100;
-  return interest;
-}
+// arrow function that calculate interest
+double calculateInterest(double principal, double rate, double time) =>
+    principal * rate * time / 100;
 
 void main() {
   double principal = 5000;
