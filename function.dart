@@ -1,12 +1,7 @@
-// Here num1 and num2 are parameters
-void add(int num1, int num2) {
-  int sum;
-  sum = num1 + num2;
-
-  print("The sum is $sum");
+void main() {
+  printName();
 }
 
-void main() {
-  // Here 10 and 20 are arguments
-  add(10, 20);
+void printName() {
+  print("My name is John Doe.");
 }
