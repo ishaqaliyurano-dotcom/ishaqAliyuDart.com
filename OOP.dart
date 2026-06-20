@@ -12,12 +12,24 @@ class Tesla extends Car {
   }
 }
 
+class Model3 extends Tesla {
+  // Properties
+  String? color;
+
+  // Method to display the values of the properties
+  void display() {
+    super.display();
+    print("Color: ${color}");
+  }
+}
+
 void main() {
-  // Create an object of Tesla class
-  Tesla t = new Tesla();
+  // Create an object of Model3 class
+  Model3 m = new Model3();
   // setting values to the object
-  t.name = "Tesla Model 3";
-  t.price = 50000.00;
+  m.name = "Tesla Model 3";
+  m.price = 50000.00;
+  m.color = "Red";
   // Display the values of the object
-  t.display();
+  m.display();
 }
