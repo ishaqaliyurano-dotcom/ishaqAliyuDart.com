@@ -1,14 +1,15 @@
-class Laptop {
-  String? brand;
-  int? price;
-
+class Student {
+  String? name;
+  int? age;
+  int? rollNumber;
   // Constructor
-  Laptop() {
-    print("This is a default constructor");
-  }
+  Student(this.name, this.age, this.rollNumber);
 }
 
 void main() {
-  // Here laptop is object of class Laptop.
-  Laptop laptop = Laptop();
+  // Here student is object of class Student.
+  Student student = Student("John", 20, 1);
+  print("Name: ${student.name}");
+  print("Age: ${student.age}");
+  print("Roll Number: ${student.rollNumber}");
 }
