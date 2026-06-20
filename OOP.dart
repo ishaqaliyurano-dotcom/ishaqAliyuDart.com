@@ -1,24 +1,15 @@
 class Student {
-  String? name;
-  int? age;
-  int? rollNumber;
+  final String? name;
+  final int? age;
+  final int? rollNumber;
 
-  // Default Constructor
-  Student() {
-    print("This is a default constructor");
-  }
-
-  // Named Constructor
-  Student.namedConstructor(String name, int age, int rollNumber) {
-    this.name = name;
-    this.age = age;
-    this.rollNumber = rollNumber;
-  }
+  // Constant Constructor
+  const Student({this.name, this.age, this.rollNumber});
 }
 
 void main() {
-  // Here student is object of class Student.
-  Student student = Student.namedConstructor("John", 20, 1);
+  // Here student is object of Student.
+  const Student student = Student(name: "John", age: 20, rollNumber: 1);
   print("Name: ${student.name}");
   print("Age: ${student.age}");
   print("Roll Number: ${student.rollNumber}");
