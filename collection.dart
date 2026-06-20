@@ -1,6 +1,6 @@
 void main() {
-  var evenList = [2, 4, 6, 8, 10];
-  print(evenList);
-  evenList.add(12);
-  print(evenList);
+  List myList = [3, 4, 2, 5];
+  print(myList);
+  myList.insert(2, 15);
+  print(myList);
 }
