@@ -1,20 +1,16 @@
-class Employee {
-  // Private property
-  var _name;
+class Person {
+  // Properties
+  String? firstName;
+  String? lastName;
 
-  // Getter method to access private property _name
-  String getName() {
-    return _name;
-  }
+  // Constructor
+  Person(this.firstName, this.lastName);
 
-  // Setter method to update private property _name
-  void setName(String name) {
-    this._name = name;
-  }
+  // Getter
+  String get fullName => "$firstName $lastName";
 }
 
 void main() {
-  var employee = Employee();
-  employee.setName("Jack");
-  print(employee.getName());
+  Person p = Person("John", "Doe");
+  print(p.fullName);
 }
