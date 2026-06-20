@@ -1,10 +1,17 @@
 void main() {
-  Map<String, String> countryCapital = {
-    'USA': 'Nothing',
-    'India': 'New Delhi',
-    'China': 'Beijing',
-  };
+  List<String> days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
-  countryCapital.remove("USA");
-  print(countryCapital);
+  List<String> startWithS = days
+      .where((element) => element.startsWith("S"))
+      .toList();
+
+  print(startWithS);
 }
