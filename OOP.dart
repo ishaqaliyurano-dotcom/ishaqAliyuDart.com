@@ -1,17 +1,20 @@
-class Car {
-  int noOfSeats = 4;
+class Animal {
+  void eat() {
+    print("Animal is eating");
+  }
 }
 
-class Tesla extends Car {
-  int noOfSeats = 6;
-
-  void display() {
-    print("No of seats in Tesla: $noOfSeats");
-    print("No of seats in Car: ${super.noOfSeats}");
+class Dog extends Animal {
+  @override
+  void eat() {
+    print("Dog is eating");
   }
 }
 
 void main() {
-  var tesla = Tesla();
-  tesla.display();
+  Animal animal = Animal();
+  animal.eat();
+
+  Dog dog = Dog();
+  dog.eat();
 }
