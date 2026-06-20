@@ -1,31 +1,26 @@
-abstract class Animal {
-  // properties
-  String name;
-  double speed;
+class Person {
+  String firstName;
+  String lastName;
 
   // constructor
-  Animal(this.name, this.speed);
+  Person(this.firstName, this.lastName);
 
-  // abstract method
-  void run();
-}
-
-// mixin CanRun is only used by class that extends Animal
-mixin CanRun on Animal {
-  // implementation of abstract method
-  @override
-  void run() => print('$name is Running at speed $speed');
-}
-
-class Dog extends Animal with CanRun {
-  // constructor
-  Dog(String name, double speed) : super(name, speed);
+  // factory constructor Person.fromMap
+  factory Person.fromMap(Map<String, Object> map) {
+    final firstName = map['firstName'] as String;
+    final lastName = map['lastName'] as String;
+    return Person(firstName, lastName);
+  }
 }
 
 void main() {
-  var dog = Dog('My Dog', 25);
-  dog.run();
-}
+  // create a person object
+  final person = Person('John', 'Doe');
 
-// Not Possible
-// class Bird with Animal { }
+  // create a person object from map
+  final person2 = Person.fromMap({'firstName': 'Harry', 'lastName': 'Potter'});
+
+  // print first and last name
+  print("From normal constructor: ${person.firstName} ${person.lastName}");
+  print("From factory constructor: ${person2.firstName} ${person2.lastName}");
+}
