@@ -1,26 +1,37 @@
-enum Gender { Male, Female, Other }
-
-class Person {
-  // Properties
-  String? firstName;
-  String? lastName;
-  Gender? gender;
-
+abstract class Shape {
+  int dim1, dim2;
   // Constructor
-  Person(this.firstName, this.lastName, this.gender);
+  Shape(this.dim1, this.dim2);
+  // Abstract method
+  void area();
+}
 
-  // display() method
-  void display() {
-    print("First Name: $firstName");
-    print("Last Name: $lastName");
-    print("Gender: $gender");
+class Rectangle extends Shape {
+  // Constructor
+  Rectangle(int dim1, int dim2) : super(dim1, dim2);
+
+  // Implementation of area()
+  @override
+  void area() {
+    print('The area of the rectangle is ${dim1 * dim2}');
+  }
+}
+
+class Triangle extends Shape {
+  // Constructor
+  Triangle(int dim1, int dim2) : super(dim1, dim2);
+
+  // Implementation of area()
+  @override
+  void area() {
+    print('The area of the triangle is ${0.5 * dim1 * dim2}');
   }
 }
 
 void main() {
-  Person p1 = Person("John", "Doe", Gender.Male);
-  p1.display();
+  Rectangle rectangle = Rectangle(10, 20);
+  rectangle.area();
 
-  Person p2 = Person("Menuka", "Sharma", Gender.Female);
-  p2.display();
+  Triangle triangle = Triangle(10, 20);
+  triangle.area();
 }
