@@ -1,26 +1,15 @@
-class Person {
-  String firstName;
-  String lastName;
-
-  // constructor
-  Person(this.firstName, this.lastName);
-
-  // factory constructor Person.fromMap
-  factory Person.fromMap(Map<String, Object> map) {
-    final firstName = map['firstName'] as String;
-    final lastName = map['lastName'] as String;
-    return Person(firstName, lastName);
-  }
+// Using Generics
+class Data<T> {
+  T data;
+  Data(this.data);
 }
 
 void main() {
-  // create a person object
-  final person = Person('John', 'Doe');
+  // create an object of type int and double
+  Data<int> intData = Data<int>(10);
+  Data<double> doubleData = Data<double>(10.5);
 
-  // create a person object from map
-  final person2 = Person.fromMap({'firstName': 'Harry', 'lastName': 'Potter'});
-
-  // print first and last name
-  print("From normal constructor: ${person.firstName} ${person.lastName}");
-  print("From factory constructor: ${person2.firstName} ${person2.lastName}");
+  // print the data
+  print("IntData: ${intData.data}");
+  print("DoubleData: ${doubleData.data}");
 }
