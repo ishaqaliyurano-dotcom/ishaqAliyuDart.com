@@ -1,23 +1,22 @@
-class Student {
+class Car {
   String? name;
-  int? age;
-  int? rollNumber;
+  double? price;
 
   // Constructor
-  Student(String name, int age, int rollNumber) {
-    print(
-      "Constructor called",
-    ); // this is for checking the constructor is called or not.
+  Car(String name, double price) {
     this.name = name;
-    this.age = age;
-    this.rollNumber = rollNumber;
+    this.price = price;
+  }
+
+  // Method
+  void display() {
+    print("Name: ${this.name}");
+    print("Price: ${this.price}");
   }
 }
 
 void main() {
-  // Here student is object of class Student.
-  Student student = Student("John", 20, 1);
-  print("Name: ${student.name}");
-  print("Age: ${student.age}");
-  print("Roll Number: ${student.rollNumber}");
+  // Here car is object of class Car.
+  Car car = Car("BMW", 500000.0);
+  car.display();
 }
