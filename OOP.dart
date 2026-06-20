@@ -1,16 +1,16 @@
-class Student {
+class Car {
   final String? name;
-  final int? age;
-  final int? rollNumber;
+  final String? model;
+  final int? price;
 
   // Constant Constructor
-  const Student({this.name, this.age, this.rollNumber});
+  const Car({this.name, this.model, this.price});
 }
 
 void main() {
-  // Here student is object of Student.
-  const Student student = Student(name: "John", age: 20, rollNumber: 1);
-  print("Name: ${student.name}");
-  print("Age: ${student.age}");
-  print("Roll Number: ${student.rollNumber}");
+  // Here car is object of class Car.
+  const Car car = Car(name: "BMW", model: "X5", price: 50000);
+  print("Name: ${car.name}");
+  print("Model: ${car.model}");
+  print("Price: ${car.price}");
 }
