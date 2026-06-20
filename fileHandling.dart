@@ -1,10 +1,10 @@
-// dart program to write to existing file
+// dart program to delete file
 import 'dart:io';
 
 void main() {
   // open file
   File file = File('test.txt');
-  // write to file
-  file.writeAsStringSync('\nThis is a new content.', mode: FileMode.append);
-  print('Congratulations!! New content is added on top of previous content.');
+  // delete file
+  file.deleteSync();
+  print('File deleted.');
 }
