@@ -1,6 +1,6 @@
 void main() {
-  var myList = [3, 4, 2, 5];
-  print(myList);
-  myList.insertAll(1, [6, 7, 10, 9]);
-  print(myList);
+  var list = [10, 15, 20, 25, 30];
+  print("List before updation: ${list}");
+  list.replaceRange(0, 4, [5, 6, 7, 8]);
+  print("List after updation using replaceAll() function : ${list}");
 }
