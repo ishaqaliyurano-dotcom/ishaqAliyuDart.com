@@ -4,5 +4,5 @@ void main() {
     'India': 'New Delhi',
     'China': 'Beijing',
   };
-  print(countryCapital);
+  print(countryCapital["USA"]);
 }
