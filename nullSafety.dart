@@ -1,9 +1,12 @@
-void main() {
-  Object name = "Pratik";
-  // print(name.length) will not work because Dart doesn't know that name is a String
-
-  if (name is String) {
-    // name promoted from Object to String
-    print("The length of name is ${name.length}");
+// method to print the length of the text
+void printLength(String? text) {
+  if (text == null) {
+    throw Exception("The text is null");
   }
+  print("Length of text is ${text.length}");
+}
+
+// main method
+void main() {
+  printLength("Hello");
 }
