@@ -1,8 +1,23 @@
-// late variable
-late String name;
+// Person class
+class Person {
+  final int age;
+  final String name;
+  late String description = heavyComputation();
+
+  // constructor
+  Person(this.age, this.name) {
+    print("Constructor is called");
+  }
+  // method
+  String heavyComputation() {
+    print("heavyComputation is called");
+    return "Heavy Computation";
+  }
+}
 
 void main() {
-  // assigning value to late variable
-  name = "John";
-  print(name);
+  // object of Person class
+  Person person = Person(10, "John");
+  print(person.name);
+  print(person.description);
 }
