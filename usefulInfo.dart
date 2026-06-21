@@ -1,14 +1,5 @@
-// import http package
-import 'package:http/http.dart' as http;
-
-void main() async {
-  var url = Uri.parse('https://jsonplaceholder.typicode.com/posts/1');
-  // make http get request
-  var response = await http.get(url);
-  // check the status code for the result
-  if (response.statusCode == 200) {
-    print(response.body);
-  } else {
-    print('Request failed with status: ${response.statusCode}.');
-  }
+void main() {
+  List<int> numbers = [1, 2, 3, 4, 5];
+  List<int> reversedNumbers = numbers.reversed.toList();
+  print(reversedNumbers); // [5, 4, 3, 2, 1]
 }
