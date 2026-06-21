@@ -1,5 +1,8 @@
+class Person {
+  String name;
+  Person(this.name);
+}
+
 void main() {
-  // list of nullable ints
-  List<int?> items = [1, 2, null, 4];
-  print(items);
+  Person person = Person(null); // give error
 }
