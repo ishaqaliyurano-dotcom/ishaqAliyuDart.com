@@ -1,8 +1,5 @@
 void main() {
-  // Declaring a nullable variable by using ?
-  String? name;
-  // Assigning John to name
-  name = "John";
-  // Assigning null to name
-  name = null;
+  // list of nullable ints
+  List<int?> items = [1, 2, null, 4];
+  print(items);
 }
