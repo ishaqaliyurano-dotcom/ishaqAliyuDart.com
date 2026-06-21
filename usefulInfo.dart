@@ -1,10 +1,7 @@
+//Example of capitalize first letter of String
 void main() {
-  String name = "john";
-  print(name.capitalize());
-}
-
-extension StringExtension on String {
-  String capitalize() {
-    return "${this[0].toUpperCase()}${this.substring(1)}";
-  }
+  String text = "hello world";
+  print(
+    "Capitalized first letter of String: ${text[0].toUpperCase()}${text.substring(1)}",
+  );
 }
