@@ -1,10 +1,9 @@
 void main() {
-  final finalName = "Final John Doe";
-  const constName = "Const John Doe";
-
-  finalName = "Raj"; // Not Possible
-  constName = "Anu"; // Not Possible
-
-  print("Final name is " + finalName);
-  print("Const name is " + constName);
+  DateTime datetime = DateTime.now();
+  print("Year is " + datetime.year.toString());
+  print("Month is " + datetime.month.toString());
+  print("Day is ${datetime.day}"); // If you don't want to use .toString
+  print("Hour is " + datetime.hour.toString());
+  print("Minutes is " + datetime.minute.toString());
+  print("Second is " + datetime.second.toString());
 }
