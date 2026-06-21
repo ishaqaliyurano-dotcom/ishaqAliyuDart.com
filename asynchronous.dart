@@ -1,14 +1,17 @@
-void main() {
-  print("Start");
-  getData();
-  print("End");
+// function that returns a stream
+Stream<String> getUserName() async* {
+  await Future.delayed(Duration(seconds: 1));
+  yield 'Mark';
+  await Future.delayed(Duration(seconds: 1));
+  yield 'John';
+  await Future.delayed(Duration(seconds: 1));
+  yield 'Smith';
 }
 
-void getData() async {
-  String data = await middleFunction();
-  print(data);
-}
-
-Future<String> middleFunction() {
-  return Future.delayed(Duration(seconds: 5), () => "Hello");
+// main function
+void main() async {
+  // you can use await for loop to get the value from stream
+  await for (String name in getUserName()) {
+    print(name);
+  }
 }
