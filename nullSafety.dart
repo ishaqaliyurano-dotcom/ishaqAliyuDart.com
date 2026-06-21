@@ -1,8 +1,8 @@
 class Person {
-  String name;
+  String? name;
   Person(this.name);
 }
 
 void main() {
-  Person person = Person(null); // give error
+  Person person = Person(null); // Works
 }
